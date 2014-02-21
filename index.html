@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es-mx">
+<head>
+	<meta charset="UTF-8">
+	<title>Go To Top</title>
+	<link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+
+		* { box-sizing: border-box; }
+		
+		html body {
+			text-align: center;
+			font-family: 'Press Start 2P';
+			font-size: 1.2em;
+			line-height: 1.5;
+		}
+
+		.container {
+			display: inline-block;
+			margin: 0 auto;
+			max-width: 910px;
+			box-shadow: 1px solid gray;
+			min-height: 100px;
+			background: gray;
+			padding: 5px;
+		}
+		.block {
+			display: inline-block;
+			width: 200px;
+			height: 350px;
+			margin: 10px 5px;
+			border: 2px solid #292929;
+			box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
+		}
+		#containerA .block { background: red;}
+		#containerB .block { background: blue;}
+		#containerC .block { background: green;}
+
+		#top {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			display: block;
+			border: 6px solid black;
+			width: 200px;
+			height: 50px;
+			border-radius: 6px;
+			background: white;
+			color: black;
+			background: gray;
+			text-decoration: none;
+			padding-top: 5px;
+			margin: 0 auto;
+		}
+
+	</style>
+<body>
+	<h1>Go To Top Example</h1>
+	<div class="container" id="containerA">
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+	</div>
+	<div class="container" id="containerB">
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+	</div>
+	<div class="container" id="containerC">
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+	</div>
+	<p>
+		<a id="top" href="#">Go To Top</a>
+	</p>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).on('ready', function () { 
+			$('a#top').click(function(){
+				$('html, body').animate({scrollTop : 0},800);
+				return false;
+			});
+		});
+	</script>
+</body>
+</html>
